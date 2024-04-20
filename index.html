@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro - Mi web de Datos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <h1>Formulario de registro - Mi web de Datos</h1>
+    <div class="container">
+         
+    <form id="registroForm">
+        <h4>Nombre: <input type="text" id="nombre" name="nombre" maxlength="50" required><br></h4>
+
+        <h4>Apellidos: <input type="text" id="apellidos" name="apellidos" maxlength="50" required><br></h4>
+
+        <h4>Sexo: 
+        <input type="radio" id="hombre" name="sexo" value="hombre" required>
+        <label for="hombre">Hombre</label>
+        <input type="radio" id="mujer" name="sexo" value="mujer" required>
+        <label for="mujer">Mujer</label><br></h4>
+
+        <H4>Email: <input type="email" id="email" name="email" required><br></H4>
+
+        <h4>Distrito: 
+        <select id="Distrito" name="Distrito">
+            <option value="Independencia">Independencia</option>
+            <option value="San Juan de Lurigancho">San Juan de Lurigancho</option>
+            <option value="Comas">Comas</option>
+            <option value="San Borja">San Borja</option>
+            <option value="Miraflores">Miraflores</option>
+            <option value="Rimac">Rimac</option>
+            <option value="Ancon">Ancon</option>
+            <option value="Carabayllo">Carabayllo</option>
+            <option value="Chorrillos">Chorrillos</option>
+            <option value="La Victoria">La Victoria</option>
+            <option value="Santa Anita">Santa Anita</option>
+            <option value="Ate">Ate</option>
+            <option value="El Agustino">El Agustino</option>
+            <option value="Magdalena del Mar">Magdalena del Mar</option>
+            <option value="Puente Piedra">Puente Piedra</option>
+        </select><br></h4>
+
+        <h4> Descripcion: </h4>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea><br><br>
+
+        <input type="checkbox" id="info" name="info" checked>
+        <label for="info">Deseo recibir información sobre novedades y ofertas</label><br><br>
+
+        <input type="checkbox" id="condiciones" name="condiciones" required>
+        <label for="condiciones">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label><br><br>
+
+        <input type="submit" value="Enviar"><br></br>
+    </form>
+  </div>
+
+    <table id="registrosTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Sexo</th>
+                <th>Correo electrónico</th>
+                <th>Distrito</th>
+                <th>Descripción</th>
+                <th>Recibir información</th>
+                <th>Aceptar condiciones</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="registrosBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
